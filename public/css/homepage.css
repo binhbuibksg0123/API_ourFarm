@@ -1,0 +1,113 @@
+#homepageimg{
+    border-radius: 50%;
+    width: 50px;
+}
+#statusDiv{
+    display: flex;
+    justify-content: center;
+}
+#statusDiv textarea{
+    margin-left: 20px;
+    width: 50%;
+    height: 30px;
+    margin-top: 8px;
+    border-radius: 50px;
+    padding: 8px;
+    resize: none;
+}
+#imgUp{
+    text-align: center;
+}
+.custom-file-input {
+    color: transparent;
+}
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+}
+.custom-file-input::before {
+    content: 'Select some files';
+    color: black;
+    display: inline-block;
+    background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+.custom-file-input:hover::before {
+    border-color: black;
+}
+.custom-file-input:active {
+    outline: 0;
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9); 
+}
+#feelDiv{
+    width: 50%;
+    margin: 0 auto;
+    border: 2px solid rgb(235, 235, 235);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+#sttSubmit{
+    margin-left: 20px;
+    width: 50px;
+    height: 30px;
+    margin-top: 9px;
+}
+#userDiv{
+    display: flex;
+
+}
+#userDiv img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#userDiv p{
+    margin-left: 10px;
+}
+#userDiv #username{
+    margin-top: 7px;
+    margin-bottom: 0px;
+}
+#userDiv #time{
+    margin-top: -3px;
+}
+#reactDiv{
+    display: flex;
+    justify-content: space-between;
+}
+#csDiv{
+    display: flex;
+}
+#csDiv p{
+    padding-left: 5px;
+}
+#thaReactDiv{
+    display: flex;
+    justify-content: space-evenly;
+}
+#postDiv{
+    border: 2px solid rgb(235, 235, 235);
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 400px;
+    max-height: 800px;
+    margin: 20px auto;
+
+}
+#postDiv img{
+    display: block;
+    margin: 0 auto;
+    max-width: 300px;
+    max-height: 300px;
+}
