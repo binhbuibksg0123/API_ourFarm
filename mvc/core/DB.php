@@ -1,6 +1,6 @@
 <?php
     class DB{
-        public $servername = "localhost";
+        public $servername = "http://jamess-macbook-pro.local/";
         protected $username = "root";
         protected $password = "";
         protected $dbname = "ourfarm";

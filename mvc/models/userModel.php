@@ -1,7 +1,7 @@
 <?php
 class userModel extends DB{
     public function findUserByEmailOrUsername($email,$username){
-        $this->query('SELECT * FROM users WHERE email = :email OR username = :username');
+        $this->query('SELECT * FROM Customers WHERE email = :email OR username = :username');
         $this->bind(':email',$email);
         $this->bind(':username',$username);
         $row = $this->single();
@@ -13,7 +13,7 @@ class userModel extends DB{
         }
     }
     public function registerUser($data){
-        $this->query('INSERT INTO users (username,email,password) VALUES (:username,:email,:password)');
+        $this->query('INSERT INTO Customers (username,email,password) VALUES (:username,:email,:password)');
         $this->bind(':username',$data['username']);
         $this->bind(':email',$data['email']);
         $this->bind(':password',$data['password']);

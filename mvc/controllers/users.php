@@ -22,24 +22,24 @@ class users extends Controller{
         if($this->userModel->findUserByEmailOrUsername($data['username'],$data['username'])){
             $logginUser = $this->userModel->loginUser($data);
             if($logginUser){
-                $status = "ok";
-                $result_code = 1;
-                $name = $logginUser['name'];
+                $error = false;
+                $message = "Login success";
+                $user = $logginUser;
                 header('Content-type: application/json');
-                echo json_encode(array("status" => $status, "result_code" => $result_code, "name" => $name),JSON_FORCE_OBJECT);
+                echo json_encode(array("error" => $error, "message" => $message, "user" => $user),JSON_FORCE_OBJECT);
             }
             else{
-                $status = "ok";
-                $result_code = 2;
+                $error = true;
+                $message = "Password incorrect";
                 header('Content-type: application/json');
-                echo json_encode(array("status" => $status, "result_code" => $result_code),JSON_FORCE_OBJECT);
+                echo json_encode(array("error" => $error, "message" => $message),JSON_FORCE_OBJECT);
             }
         }
         else{
-            $status = "ok";
-                $result_code = 3;
-                header('Content-type: application/json');
-                echo json_encode(array("status" => $status, "result_code" => $result_code),JSON_FORCE_OBJECT);
+            $error = true;
+            $message = "User not found";
+            header('Content-type: application/json');
+            echo json_encode(array("error" => $error, "message" => $message),JSON_FORCE_OBJECT);
         }
     }
     public function signup(){
